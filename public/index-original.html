@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Ever Cafe — Naigaon East</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Food Ever <span>Cafe</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#order">Order</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#order" class="nav-cta">Order Now</a>
+  <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about" onclick="toggleMobileNav()">About</a>
+  <a href="#menu" onclick="toggleMobileNav()">Menu</a>
+  <a href="#order" onclick="toggleMobileNav()">Order Online</a>
+  <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Now Open · Naigaon East</div>
+    <h1>Fresh Food,<br/><em>Every Time.</em></h1>
+    <p>Experience the finest flavours at Food Ever Cafe — your neighbourhood spot for delicious meals, fresh snacks, and warm vibes in Naigaon East, Mumbai.</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-primary">Explore Menu</a>
+      <a href="#order" class="btn-outline">Order Online</a>
+    </div>
+  </div>
+  <div class="hero-card-wrap">
+    <div class="hero-card">
+      <div class="floating-tag">⭐ Top Rated</div>
+      <div class="hero-card-emoji">🍕</div>
+      <h3>Food Ever Cafe</h3>
+      <p>Naigaon East, Mumbai</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>🍽️</strong><span>Dine In</span></div>
+        <div class="hero-stat"><strong>🛵</strong><span>Delivery</span></div>
+        <div class="hero-stat"><strong>📦</strong><span>Takeaway</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">Made With Love,<br/>Served With Pride</h2>
+      <p>Food Ever Cafe is your go-to neighbourhood cafe in Naigaon East, crafting every dish with fresh ingredients and genuine passion.</p>
+      <p>Whether you're grabbing a quick bite or settling in for a full meal, every plate that leaves our kitchen is something you'll remember. From crispy pizzas to refreshing beverages — everything is made fresh, just for you.</p>
+      <div class="about-features">
+        <div class="about-feature">
+          <div class="about-feature-icon">🥗</div>
+          <div class="about-feature-text"><strong>Fresh Ingredients Daily</strong><span>Sourced locally every morning</span></div>
+        </div>
+        <div class="about-feature">
+          <div class="about-feature-icon">⚡</div>
+          <div class="about-feature-text"><strong>Quick Service</strong><span>Fast delivery & dine-in service</span></div>
+        </div>
+        <div class="about-feature">
+          <div class="about-feature-icon">💚</div>
+          <div class="about-feature-text"><strong>Veg & Non-Veg Options</strong><span>Wide variety for everyone</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="about-visual-emoji">🏪</div>
+      <h3>Food Ever Cafe</h3>
+      <p>Shop No. 02, Near Rashmi Star City<br/>Naigaon East, Juchandra<br/>Mumbai, Maharashtra 401208<br/><br/>📞 +91 78410 28217</p>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="menu-header">
+    <div class="section-label">Our Menu</div>
+    <h2 class="section-title">What We Serve</h2>
+    <p class="section-sub">From sizzling pizzas to refreshing drinks — explore our full menu below.</p>
+  </div>
+  <div class="menu-tabs">
+    <button class="tab-btn active" onclick="filterMenu('all', this)">All Items</button>
+    <button class="tab-btn" onclick="filterMenu('pizza', this)">🍕 Pizza</button>
+    <button class="tab-btn" onclick="filterMenu('burger', this)">🍔 Burgers</button>
+    <button class="tab-btn" onclick="filterMenu('snacks', this)">🍟 Snacks</button>
+    <button class="tab-btn" onclick="filterMenu('beverages', this)">🥤 Beverages</button>
+    <button class="tab-btn" onclick="filterMenu('desserts', this)">🍰 Desserts</button>
+  </div>
+  <div class="menu-grid" id="menuGrid">
+    <!-- PIZZAS -->
+    <div class="menu-item" data-cat="pizza"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>Margherita Pizza</h4><span class="menu-item-price">₹199</span></div><p>Classic tomato base with mozzarella cheese and fresh basil</p></div>
+    <div class="menu-item" data-cat="pizza"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>Farm Fresh Veggie</h4><span class="menu-item-price">₹229</span></div><p>Loaded with capsicum, onion, corn, mushroom & olives</p></div>
+    <div class="menu-item" data-cat="pizza"><div class="menu-item-badges"><span class="nonveg-badge"></span></div><div class="menu-item-top"><h4>Chicken Tikka Pizza</h4><span class="menu-item-price">₹269</span></div><p>Spicy chicken tikka chunks with tangy red sauce & cheese</p></div>
+    <div class="menu-item" data-cat="pizza"><div class="menu-item-badges"><span class="nonveg-badge"></span></div><div class="menu-item-top"><h4>BBQ Chicken Pizza</h4><span class="menu-item-price">₹279</span></div><p>Smoky BBQ sauce, grilled chicken, caramelised onions</p></div>
+    <!-- BURGERS -->
+    <div class="menu-item" data-cat="burger"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>Veg Aloo Burger</h4><span class="menu-item-price">₹79</span></div><p>Crispy aloo tikki with fresh veggies and zesty sauces</p></div>
+    <div class="menu-item" data-cat="burger"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>Paneer Burger</h4><span class="menu-item-price">₹109</span></div><p>Grilled paneer patty with lettuce, cheese & mayo</p></div>
+    <div class="menu-item" data-cat="burger"><div class="menu-item-badges"><span class="nonveg-badge"></span></div><div class="menu-item-top"><h4>Chicken Burger</h4><span class="menu-item-price">₹129</span></div><p>Juicy chicken patty, crunchy lettuce, chipotle mayo</p></div>
+    <div class="menu-item" data-cat="burger"><div class="menu-item-badges"><span class="nonveg-badge"></span></div><div class="menu-item-top"><h4>Spicy Chicken Burger</h4><span class="menu-item-price">₹139</span></div><p>Extra spicy crispy chicken with sriracha drizzle</p></div>
+    <!-- SNACKS -->
+    <div class="menu-item" data-cat="snacks"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>French Fries</h4><span class="menu-item-price">₹79</span></div><p>Golden crispy fries served with ketchup & mayo dip</p></div>
+    <div class="menu-item" data-cat="snacks"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>Veg Sandwich</h4><span class="menu-item-price">₹69</span></div><p>Toasted sandwich with veggies, cheese & green chutney</p></div>
+    <div class="menu-item" data-cat="snacks"><div class="menu-item-badges"><span class="nonveg-badge"></span></div><div class="menu-item-top"><h4>Chicken Roll</h4><span class="menu-item-price">₹119</span></div><p>Soft roll with spicy chicken filling, onions & sauces</p></div>
+    <div class="menu-item" data-cat="snacks"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>Cheese Garlic Bread</h4><span class="menu-item-price">₹99</span></div><p>Toasted garlic bread loaded with melted cheese</p></div>
+    <!-- BEVERAGES -->
+    <div class="menu-item" data-cat="beverages"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>Cold Coffee</h4><span class="menu-item-price">₹89</span></div><p>Chilled blended coffee with ice cream & chocolate drizzle</p></div>
+    <div class="menu-item" data-cat="beverages"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>Fresh Lime Soda</h4><span class="menu-item-price">₹59</span></div><p>Refreshing lime with soda, sweet or salted</p></div>
+    <div class="menu-item" data-cat="beverages"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>Mango Shake</h4><span class="menu-item-price">₹99</span></div><p>Thick creamy mango milkshake made with fresh mangoes</p></div>
+    <div class="menu-item" data-cat="beverages"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>Masala Chai</h4><span class="menu-item-price">₹29</span></div><p>Classic Indian spiced tea brewed fresh</p></div>
+    <!-- DESSERTS -->
+    <div class="menu-item" data-cat="desserts"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>Chocolate Brownie</h4><span class="menu-item-price">₹99</span></div><p>Warm fudgy brownie served with vanilla ice cream</p></div>
+    <div class="menu-item" data-cat="desserts"><div class="menu-item-badges"><span class="veg-badge"></span></div><div class="menu-item-top"><h4>Gulab Jamun (2 pcs)</h4><span class="menu-item-price">₹59</span></div><p>Soft classic gulab jamuns served warm in syrup</p></div>
+  </div>
+</section>
+
+<!-- ORDER ONLINE -->
+<section class="order-section" id="order">
+  <div class="section-label">Order Online</div>
+  <h2 class="section-title">Craving Something?</h2>
+  <p class="section-sub">Order your favourite food from the comfort of your home — delivered fresh and fast!</p>
+  <div class="order-btns">
+    <a href="https://www.zomato.com/mumbai/food-ever-cafe-2-vasai" target="_blank" class="order-btn order-btn-zomato">
+      <span class="order-btn-icon">🍅</span> Order on Zomato
+    </a>
+    <a href="https://www.swiggy.com/city/mumbai/food-ever-cafe-vasai-rest1083454" target="_blank" class="order-btn order-btn-swiggy">
+      <span class="order-btn-icon">🛵</span> Order on Swiggy
+    </a>
+    <button class="order-btn order-btn-wa" onclick="openWA()">
+      <span class="order-btn-icon">💬</span> WhatsApp Order
+    </button>
+  </div>
+</section>
+
+<!-- WHATSAPP MODAL -->
+<div class="wa-overlay" id="waOverlay" onclick="overlayClose(event)">
+  <div class="wa-modal">
+    <div class="wa-modal-head">
+      <h2>📋 Our Menu</h2>
+      <button class="wa-close" onclick="closeWA()">✕</button>
+    </div>
+    <p class="wa-modal-sub">Browse our menu below, then tap the button to send your order via WhatsApp. We'll confirm it shortly!</p>
+    <div class="wa-cat"><h3>🍕 Pizza</h3>
+      <div class="wa-row"><span class="wa-row-name">Margherita Pizza</span><span class="wa-row-price">₹199</span></div>
+      <div class="wa-row"><span class="wa-row-name">Farm Fresh Veggie</span><span class="wa-row-price">₹229</span></div>
+      <div class="wa-row"><span class="wa-row-name">Chicken Tikka Pizza</span><span class="wa-row-price">₹269</span></div>
+      <div class="wa-row"><span class="wa-row-name">BBQ Chicken Pizza</span><span class="wa-row-price">₹279</span></div>
+    </div>
+    <div class="wa-cat"><h3>🍔 Burgers</h3>
+      <div class="wa-row"><span class="wa-row-name">Veg Aloo Burger</span><span class="wa-row-price">₹79</span></div>
+      <div class="wa-row"><span class="wa-row-name">Paneer Burger</span><span class="wa-row-price">₹109</span></div>
+      <div class="wa-row"><span class="wa-row-name">Chicken Burger</span><span class="wa-row-price">₹129</span></div>
+      <div class="wa-row"><span class="wa-row-name">Spicy Chicken Burger</span><span class="wa-row-price">₹139</span></div>
+    </div>
+    <div class="wa-cat"><h3>🍟 Snacks</h3>
+      <div class="wa-row"><span class="wa-row-name">French Fries</span><span class="wa-row-price">₹79</span></div>
+      <div class="wa-row"><span class="wa-row-name">Veg Sandwich</span><span class="wa-row-price">₹69</span></div>
+      <div class="wa-row"><span class="wa-row-name">Chicken Roll</span><span class="wa-row-price">₹119</span></div>
+      <div class="wa-row"><span class="wa-row-name">Cheese Garlic Bread</span><span class="wa-row-price">₹99</span></div>
+    </div>
+    <div class="wa-cat"><h3>🥤 Beverages</h3>
+      <div class="wa-row"><span class="wa-row-name">Cold Coffee</span><span class="wa-row-price">₹89</span></div>
+      <div class="wa-row"><span class="wa-row-name">Fresh Lime Soda</span><span class="wa-row-price">₹59</span></div>
+      <div class="wa-row"><span class="wa-row-name">Mango Shake</span><span class="wa-row-price">₹99</span></div>
+      <div class="wa-row"><span class="wa-row-name">Masala Chai</span><span class="wa-row-price">₹29</span></div>
+    </div>
+    <div class="wa-cat"><h3>🍰 Desserts</h3>
+      <div class="wa-row"><span class="wa-row-name">Chocolate Brownie</span><span class="wa-row-price">₹99</span></div>
+      <div class="wa-row"><span class="wa-row-name">Gulab Jamun (2 pcs)</span><span class="wa-row-price">₹59</span></div>
+    </div>
+    <button class="wa-send-btn" onclick="sendWA()">💬 Send Order on WhatsApp</button>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-label">Find Us</div>
+  <h2 class="section-title">Visit Us Today</h2>
+  <div class="contact-grid">
+    <div class="info-cards">
+      <div class="info-card">
+        <div class="info-card-icon">📍</div>
+        <div class="info-card-body">
+          <strong>Address</strong>
+          <p>Shop No. 02, Near Rashmi Star City,<br/>Naigaon East, Juchandra,<br/>Mumbai, Maharashtra 401208</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">📞</div>
+        <div class="info-card-body">
+          <strong>Phone / WhatsApp</strong>
+          <a href="tel:+978410 28217">+91 78410 28217</a>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">🕐</div>
+        <div class="info-card-body">
+          <strong>Opening Hours</strong>
+          <p>Monday – Sunday<br/>10:00 AM – 11:00 PM</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">🛵</div>
+        <div class="info-card-body">
+          <strong>Order Online</strong>
+          <a href="https://www.zomato.com/mumbai/food-ever-cafe-2-vasai" target="_blank">Zomato</a>
+          &nbsp;•&nbsp;
+          <a href="https://www.swiggy.com/city/mumbai/food-ever-cafe-vasai-rest1083454" target="_blank">Swiggy</a>
+        </div>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93.07!2d72.8624044!3d19.3577447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7affb88680af9%3A0x8255fa74eb5cd653!2sFood%20Ever%20Cafe!5e1!3m2!1sen!2sin!4v1710000000000"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Food Ever <span>Cafe</span></div>
+  <p>Shop No. 02, Near Rashmi Star City, Naigaon East, Mumbai 401208</p>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-hr"></div>
+  <p>© 2025 Food Ever Cafe. All rights reserved. Made with ❤️ in Naigaon.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
